@@ -9,7 +9,22 @@ String path = request.getContextPath();
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>hello world</title>
     <link href="<%=path%>/static/editormd/css/editormd.css" rel="stylesheet" type="text/css" />
+<style>
+	h1{
+		text-align: center;
+	}
+	input[type='submit']{
+		width: 100px;
+		height: 50px;
+		color: #fff; 
+		background-color:#90DBFF;
+		position:fixed;
+		bottom:0px;
+		left:45% ;
+	}
+</style>
 </head>
+
 <body>
 	<h1>EditorMd 测试</h1>
 	<br><br><br><br>

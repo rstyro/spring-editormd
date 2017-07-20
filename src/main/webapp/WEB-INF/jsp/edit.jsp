@@ -9,6 +9,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="<%=path%>/static/editormd/css/editormd.css" rel="stylesheet" type="text/css" />
 <title>编辑 ${data.title }</title>
+<style>
+	h1{
+		text-align: center;
+	}
+	input[type='submit']{
+		width: 100px;
+		height: 50px;
+		color: #fff; 
+		background-color:#90DBFF;
+		position:fixed;
+		bottom:0px;
+		left:45% ;
+	}
+</style>
 </head>
 <body>
 	<h1>${data.title }</h1>

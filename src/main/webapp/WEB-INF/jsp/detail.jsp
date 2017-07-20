@@ -9,6 +9,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link href="<%=path%>/static/editormd/css/editormd.css" rel="stylesheet" type="text/css" />
 <title>详情--${data.title }</title>
+<style>
+	body{
+		text-align: center;
+	}
+	a{
+		padding: 20px;
+		font-size: 2em;
+	}
+</style>
 </head>
 <body>
 	<h1>传过来的代码：</h1>
