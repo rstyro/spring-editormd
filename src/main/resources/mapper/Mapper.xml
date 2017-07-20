@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.lrshuai.dao.Dao" >
+	
+	<!-- 获取文章详情 -->
+	<select id="getArticleDetail" parameterType="java.lang.Long" resultType="map">
+		SELECT
+			a.article_id,
+			a.user_id,
+			a.title,
+			a.content,
+			a.browse_num,
+			a.comment_num,
+			a.praise_num,
+			a.create_time
+		from 
+			article a
+		where
+			a.article_id=#{article_id} and isdel=0
+	</select>
+	
+	<!-- 更新文章 -->
+	<update id="updateArticle" parameterType="map">
+		update article
+			set 
+				content = #{content},
+				article_id = #{article_id}
+			where
+				article_id=#{article_id}	
+	</update>
+	
+	<!-- 保存文章 -->
+	<insert id="saveArticle" parameterType="map" useGeneratedKeys="true" keyProperty="id">
+		insert into article(
+			<if test="user_id != null and user_id != ''">
+				user_id,
+			</if>
+			title,
+			content,
+			create_time
+		)values(
+			<if test="user_id != null and user_id != ''">
+				#{user_id},
+			</if>
+			#{title},
+			#{content},
+			#{create_time}
+		)
+	</insert>
+	
+</mapper>

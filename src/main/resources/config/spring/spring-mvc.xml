@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+xmlns:jee="http://www.springframework.org/schema/jee"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/aopz
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- 启用spring mvc 注解 
+    <context:annotation-config />
+    -->
+	<mvc:annotation-driven />
+    <mvc:default-servlet-handler/>
+    <!-- 自动扫描 -->
+	<context:component-scan base-package="top.lrshuai.editormd.controller"/>
+	<!-- 访问静态资源 -->
+	<mvc:resources mapping="/static/**" location="/,/static/" />
+	
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	 <!-- 上传拦截，如最大上传值及最小上传值 -->
+	  <bean id="multipartResolver"   class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >   
+		  <property name="maxUploadSize">    
+	          <value>104857600</value>    
+	       </property>
+	        <property name="maxInMemorySize">    
+	            <value>4096</value>    
+	        </property>   
+	         <property name="defaultEncoding">    
+	            <value>utf-8</value>    
+	        </property>
+    </bean> 
+	
+</beans>
