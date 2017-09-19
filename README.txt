@@ -1,8 +1,10 @@
-����һ��Spring + Springmvc + mybatis �ܹ���demo
+这是一个Spring + Springmvc + mybatis 架构的demo
 
-���demo��Ҫ������editor.md �Ļ���ʹ�÷���
+这个demo主要讲的是editor.md 的基本使用方法
 
-��Ҳ�ǸոսӴ��ģ������ʲô���Եĵط���
-����ϵ��
-QQ���䣺1006059906@qq.com
-���ͣ�www.lrshuai.top  (����������������Ҳ���Կ�����������)
+我也是刚刚接触的，如果有什么不对的地方，
+请联系我
+QQ邮箱：1006059906@qq.com
+博客：www.lrshuai.top  (在留言那里留言我也可以看到！！！！)
+#图片展示
+![]("https://github.com/rstyro/spring-editormd/blob/master/img/1.png")
